@@ -5,9 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/mpg.css">
-    <title>Hello Source Control</title>
+    <script src="js/mpgCalc.js"></script>
+    <title>Hello Source Control with MPG Calc</title>
 </head>
 <body>
-    <h1>Hello Source Control</h1>
+    <h1>Hello Source Control I'm going to use the MPG Calculator as a base</h1>
+    <main>
+        <h1>Calculate Miles Per Gallon</h1>
+        <label for="miles">Miles Driven:</label>
+		<input type="text" id="miles">
+        <span>*</span><br>
+        <label for="gallons">Gallons of Gas Used:</label>
+        <input type="text" id="gallons">
+        <span>*</span><br>
+        <label for="mpg">Miles Per Gallon</label>
+        <input type="text" id="mpg" disabled><br>
+        <label>&nbsp;</label>
+        <input type="button" id="calculate" value="Calculate MPG"><br>
+        <label>&nbsp;</label>
+        <input type="button" id="clear" value="Clear Entries"><br>
 </body>
 </html>
