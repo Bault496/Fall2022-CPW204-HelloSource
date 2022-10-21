@@ -25,10 +25,16 @@ function main() {
 function displayResults(milesPerGallon) {
     var mpgBox = document.getElementById("mpg");
     mpgBox.value = milesPerGallon.toString();
+    clearSpans();
+
 }
 function calculateMPG(milesDrive, gallonsUsed) {
     var mpg = milesDrive / gallonsUsed;
     return mpg;
+}
+function clearSpans() {
+    document.getElementById("spanMiles").textContent = "*"
+    document.getElementById("spanGallons").textContent = "*"
 }
 function clear() {
     var milesBox = document.getElementById("miles");
@@ -37,6 +43,8 @@ function clear() {
     milesBox.value = "";
     gallonsBox.value = "";
     mpgBox.value = "";
+    milesBox.nextElementSibling.innerHTML = "*";
+    gallonsBox.nextElementSibling.innerHTML = "*";
 }
 function milesDouble() {
     var milesBox = document.getElementById("miles");
